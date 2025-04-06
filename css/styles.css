@@ -21,4 +21,136 @@ nav ul {
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: #12131A;
+}
+.general-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2.5rem;
+  margin: auto;
+}
+.text {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  margin: 0;
+}
+.white-text{
+  color: white;
+}
+.black-text{
+  color: black;
+}
+.small-text{
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+.medium-text{
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+.large-text{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.top-bar{
+  display: flex;
+  justify-content: space-between;
+
+}
+.sun-icon-image{
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.sun-icon-block{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.375rem;
+  background-color: #2A2B37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-title{
+  text-align: center;
+}
+.textarea-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.textarea-to-fill{
+  height: 12.5rem;
+  background-color: #21222C;
+  border: 2px solid #2A2B37;
+  padding: 16px;
+  border-radius: 0.75rem;
+  resize: none;
+}
+.textarea-to-fill:focus{
+ border: 0.125rem solid #c27cf8;
+ box-shadow: 0 0 0.625rem #c27cf8;
+ outline: none;
+}
+.checkbox{
+  accent-color: #c27cf8;
+}
+.textarea-info-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 12px;
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card{
+  width: 21.4375rem;
+  height: 8.125rem;
+  border-radius: 0.75rem;
+  padding: 1.6875rem 1.25rem;
+}
+.purple-card{
+  background-color: #D3A0FA;
+  background-image: url(../assets/images/pattern-character-count.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.yellow-card{
+  background-color: #FF9F00;
+  background-image: url(../assets/images/pattern-word-count.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.orange-card{
+  background-color: #FE8159;
+  background-image: url(../assets/images/pattern-sentence-count.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+@media screen and (width >= 768px){
+  .general-block{
+    max-width: 48rem;
+    padding: 16px;
+  }
+  .textarea-info-text{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .cards{
+    flex-direction: row;
+  }
+
+}
+@media screen and (width >= 1440px){
+  .general-block{
+    max-width: 61.875rem;
+  }
 }

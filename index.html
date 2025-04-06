@@ -3,10 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Characters counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+  <section class="general-block">
+    <header>
+      <section class="top-bar">
+        <img src="assets/images/logo-dark-theme.svg" alt="logotipo">
+        <div class="sun-icon-block"><img src="assets/images/icon-sun.svg" alt="sunrise image" class="sun-icon-image"></div>
+      </section>
+    </header>
+    <h1 class="main-title text white-text large-text">Analyze your text in real-time.</h1>
+    <section class="textarea-group">
+      <textarea name="textarea-to-fill" id="textarea-to-fill" class="textarea-to-fill text white-text medium-text" placeholder="Start writing..."></textarea>
+      <div class="textarea-info-text">
+        <div>
+          <input type="checkbox" id="exclude-spaces-textarea" class="checkbox">
+          <label for="exclude-spaces-textarea" class="checkbox-text white-text small-text"> Exclude Spaces</label>
+        </div>
+        <p id="aprox-reading-time" class="text white-text small-text">Approx. reading time:</p>
+    </div>
+    </section>
+    <section class="cards text">
+      <div class="card purple-card">
+        <p id="total-characters-number" class="large-text">0</p>
+        <p class="medium-text">Total Characters</p>
+      </div>
+      <div class="card yellow-card">
+        <p id="word-count-number" class="large-text">0</p>
+        <p class="medium-text">Word Count</p>
+      </div>
+      <div class="card orange-card">
+        <p id="sentence-count-number" class="large-text">0</p>
+        <p class="medium-text">Sentence Count</p>
+      </div>
+    </section>
+</section>
     <script src="./js/scripts.js"></script>
   </body>
 </html>
