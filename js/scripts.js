@@ -13,11 +13,11 @@ const defineTotalCharactersWithSpaces = () => {
 }
 
 const defineTotalCharacters = () => {
-    let amountCharacters = ''
-    let amountSpaces = ''
+    let amountCharacters = 0
+    let amountSpaces = 0
 
     for (const letter of textareaToFill.value){
-        if (excludeSpaceCheckbox.checked && letter.includes(' ')){
+        if (excludeSpaceCheckbox.checked && letter === ' '){
             amountSpaces++
             amountCharacters++
         } else {amountCharacters++}
@@ -31,7 +31,7 @@ const defineAmountWords = () => {
     let words = ''
     
     for (const letter of textareaToFill.value){
-       if (letter.includes(' ') || letter.includes('. ')){
+       if (letter === '.'){
         words++
        } 
     }
@@ -42,10 +42,9 @@ const defineAmountWords = () => {
 }
 
 const defineAmountSentences = () => {
-    //¿si o sí debe terminar en .?
-    let sentences = ''
+    let sentences = 0
     for (const letter of textareaToFill.value){
-        if (letter.includes('.')){
+        if (letter === '.'){
          sentences++
         }
      }
@@ -58,7 +57,7 @@ const defineAmountSentences = () => {
 }
 
 
-const defineAllCards = (event) => {
+const defineAllCards = () => {
    
     if (excludeSpaceCheckbox.checked){
         totalCharactersNumber.textContent = defineTotalCharacters()
@@ -70,7 +69,5 @@ const defineAllCards = (event) => {
 
     sentenceCountNumber.textContent = defineAmountSentences()
     
-
-    
 }
-textareaToFill.addEventListener('keyup', defineAllCards)
+textareaToFill.addEventListener('input', defineAllCards)
