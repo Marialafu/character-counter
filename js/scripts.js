@@ -31,8 +31,13 @@ const defineTotalCharacters = () => {
 const defineAmountWords = () => {
   let amountWords = 0;
   let words = textareaToFill.value.split(' ');
-  amountWords = words.length;
   console.log(words);
+
+  if (!textareaToFill.value) {
+    amountWords = 0;
+  } else {
+    amountWords = words.length;
+  }
 
   return amountWords;
 };
@@ -55,8 +60,12 @@ const defineAllCards = () => {
     totalCharactersNumber.textContent = defineTotalCharactersWithSpaces();
   }
 
-  wordCountNumber.textContent = defineAmountWords();
+  if (defineAmountSentences() < 10) {
+    sentenceCountNumber.textContent = '0' + defineAmountSentences();
+  } else {
+    sentenceCountNumber.textContent = defineAmountSentences();
+  }
 
-  sentenceCountNumber.textContent = defineAmountSentences();
+  wordCountNumber.textContent = defineAmountWords();
 };
 textareaToFill.addEventListener('input', defineAllCards);
